@@ -6,7 +6,7 @@ project(${PROJ_NAME} CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-set(DEPENDENCY_GLM_INCLUDE "" CACHE PATH "Path to GLM include directory.")
+set(DEPENDENCY_GLM_INCLUDE "${CMAKE_CURRENT_LIST_DIR}/third_party_libs/glm/" CACHE PATH "Path to GLM include directory.")
 
 add_definitions(-DGLM_FORCE_DEPTH_ZERO_TO_ONE)
 add_definitions(-DGLM_ENABLE_EXPERIMENTAL)
