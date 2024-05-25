@@ -6,16 +6,14 @@ project(${PROJ_NAME} CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-set(DEPENDENCY_GLM_INCLUDE "${CMAKE_CURRENT_LIST_DIR}/third_party_libs/glm/" CACHE PATH "Path to GLM include directory.")
-
 add_definitions(-DGLM_FORCE_DEPTH_ZERO_TO_ONE)
 add_definitions(-DGLM_ENABLE_EXPERIMENTAL)
 add_definitions(-DGLM_FORCE_CTOR_INIT)
 
 add_library(${PROJ_NAME} STATIC)
-target_include_directories(${PROJ_NAME} PRIVATE ${DEPENDENCY_GLM_INCLUDE})
+target_include_directories(${PROJ_NAME} PRIVATE "third_party_libs/glm")
 target_sources(${PROJ_NAME}
-  PUBLIC
+  PRIVATE
     FILE_SET cxx_modules TYPE CXX_MODULES FILES
     third_party_libs/glm/glm/glm.cppm
 )
