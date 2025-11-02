@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.28)
+cmake_minimum_required(VERSION 3.3)
 
 set(PROJ_NAME glm_module)
 project(${PROJ_NAME} CXX)
@@ -6,7 +6,7 @@ project(${PROJ_NAME} CXX)
 add_library(${PROJ_NAME} STATIC)
 
 set_target_properties(${PROJ_NAME} PROPERTIES
-  CXX_STANDARD 20
+  CXX_STANDARD 23
   POSITION_INDEPENDENT_CODE ON
 )
 
