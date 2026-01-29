@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.2.0)
+cmake_minimum_required(VERSION 4.1.2)
 
 set(PROJ_NAME glm_module)
 project(${PROJ_NAME} CXX)
